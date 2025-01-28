@@ -18,7 +18,6 @@ Este projeto é uma API REST desenvolvida com **Quarkus**, utilizando **Hibernat
 
 ## 🔧 Configuração do Banco de Dados H2
 O projeto usa um banco de dados em memória (**H2**) para persistência dos dados.
-Adicione as seguintes configurações no arquivo **`application.properties`**:
 
 ## ⚡ Como Executar o Projeto
 
