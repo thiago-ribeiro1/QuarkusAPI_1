@@ -12,7 +12,6 @@ Este projeto é uma API REST desenvolvida com **Quarkus**, utilizando **Hibernat
 - **H2 Database** (Banco de dados em memória)
 - **Hibernate ORM com Panache** (Facilidade para manipulação de entidades JPA)
 - **Jakarta RESTful Web Services (JAX-RS)** (Para criação de endpoints REST)
-- **Vert.x e Undertow** (Para suporte ao console H2)
 
 ---
 
