@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frutas Disponíveis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/3082025.png"> <!-- ícone -->
+</head>
+<body>
+
+<!-- Título e descrição -->
+<header>
+    <h1>API Quarkus Rodando!</h1>
+    <p>Acesse o endpoint:</p>
+    <ul>
+        <li><a href="/frutas">/frutas</a> - Listar frutas</li>
+    </ul>
+</header>
+
+<!-- Container dos cards -->
+<div class="container">
+    <div class="card-container" id="frutas-list"></div>
+</div>
+
+<script>
+    async function carregarFrutas() {
+        try {
+            let response = await fetch('/frutas');
+            let frutas = await response.json();
+
+            let lista = document.getElementById('frutas-list');
+            lista.innerHTML = frutas.map(f =>
+                `<div class="card">
+                        <img src="images/frutas.jpeg" alt="${f.nome}">
+                        <p class="estoque">Estoque: ${f.qtd} unidades</p>
+                        <div class="card-content">
+                            <h2>${f.nome}</h2>
+                        </div>
+                    </div>`
+            ).join('');
+        } catch (error) {
+            console.error('Erro ao carregar frutas:', error);
+        }
+    }
+
+    carregarFrutas();
+</script>
+
+</body>
+</html>
