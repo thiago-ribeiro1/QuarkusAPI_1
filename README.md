@@ -79,4 +79,3 @@ DELETE http://localhost:8080/frutas/1
 ## 🔥 Dicas Adicionais
 ✅ Para testes via **Postman**, importe a URL `http://localhost:8080/frutas` e utilize os endpoints mencionados.  
 ✅ Para ver os logs SQL no console, o **quarkus.hibernate-orm.log.sql=true** está ativado.  
-✅ O console do H2 pode ser acessado para visualizar e manipular os dados manualmente.
